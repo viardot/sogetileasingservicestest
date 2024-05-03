@@ -1,21 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-03T11:23:15 CEST" name="apiTestPlaywright.APITest" finished-at="2024-05-03T11:23:16 CEST" duration-ms="1013">
+  <suite started-at="2024-05-03T12:03:09 CEST" name="apiTestPlaywright.APITest" finished-at="2024-05-03T12:03:10 CEST" duration-ms="875">
     <groups>
     </groups>
-    <test started-at="2024-05-03T11:23:15 CEST" name="Command line test" finished-at="2024-05-03T11:23:16 CEST" duration-ms="1013">
+    <test started-at="2024-05-03T12:03:09 CEST" name="Command line test" finished-at="2024-05-03T12:03:10 CEST" duration-ms="875">
       <class name="apiTestPlaywright.APITest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T11:23:15 CEST" name="setup" finished-at="2024-05-03T11:23:16 CEST" duration-ms="961" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T12:03:09 CEST" name="setup" finished-at="2024-05-03T12:03:10 CEST" duration-ms="841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAPISogetiLeasingServices()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T11:23:16 CEST" name="testAPISogetiLeasingServices" finished-at="2024-05-03T11:23:16 CEST" duration-ms="29" status="PASS">
+        <test-method signature="testAPISogetiLeasingSolutions()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T12:03:10 CEST" name="testAPISogetiLeasingSolutions" finished-at="2024-05-03T12:03:10 CEST" duration-ms="8" status="FAIL">
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='connect EHOSTUNREACH 172.24.218.143:8080
+  name='Error
+  stack='Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='connect EHOSTUNREACH 172.24.218.143:8080
+  name='Error
+  stack='Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetchImpl(APIRequestContextImpl.java:138)
+at com.microsoft.playwright.impl.APIRequestContextImpl.lambda$fetch$1(APIRequestContextImpl.java:59)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetch(APIRequestContextImpl.java:59)
+at com.microsoft.playwright.impl.APIRequestContextImpl.get(APIRequestContextImpl.java:179)
+at com.microsoft.playwright.APIRequestContext.get(APIRequestContext.java:249)
+at apiTestPlaywright.APITest.testAPISogetiLeasingSolutions(APITest.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='connect EHOSTUNREACH 172.24.218.143:8080
+  name='Error
+  stack='Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 47 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAPISogetiLeasingServices -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T11:23:16 CEST" name="teardown" finished-at="2024-05-03T11:23:16 CEST" duration-ms="5" status="PASS">
+        </test-method> <!-- testAPISogetiLeasingSolutions -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T12:03:10 CEST" name="teardown" finished-at="2024-05-03T12:03:10 CEST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

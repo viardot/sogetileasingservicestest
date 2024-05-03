@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="apiTestPlaywright.APITest" time="0.064" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="apiTestPlaywright.APITest" time="0.013" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.11+9-Debian-1deb12u1"/>
@@ -57,5 +57,65 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase classname="apiTestPlaywright.APITest" name="testAPISogetiLeasingServices" time="0.064"/>
+  <testcase classname="apiTestPlaywright.APITest" name="testAPISogetiLeasingSolutions" time="0.013">
+    <failure message="Error {
+  message=&apos;connect EHOSTUNREACH 172.24.218.143:8080
+  name=&apos;Error
+  stack=&apos;Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+" type="com.microsoft.playwright.PlaywrightException">com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;connect EHOSTUNREACH 172.24.218.143:8080
+  name=&apos;Error
+  stack=&apos;Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.fetchImpl(APIRequestContextImpl.java:138)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.lambda$fetch$1(APIRequestContextImpl.java:59)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.fetch(APIRequestContextImpl.java:59)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.get(APIRequestContextImpl.java:179)
+	at com.microsoft.playwright.APIRequestContext.get(APIRequestContext.java:249)
+	at apiTestPlaywright.APITest.testAPISogetiLeasingSolutions(APITest.java:40)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;connect EHOSTUNREACH 172.24.218.143:8080
+  name=&apos;Error
+  stack=&apos;Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 47 more
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@424c0bc4
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</system-err>
+  </testcase>
 </testsuite>

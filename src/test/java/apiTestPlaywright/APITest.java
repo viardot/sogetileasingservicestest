@@ -34,7 +34,7 @@ public class APITest {
 	}
 	
 	@Test
-	public void testAPISogetiLeasingServices() {
+	public void testAPISogetiLeasingSolutions() {
 		
 		//GET
 		Integer responseStatus = apiRequestContext.get("/").status();		

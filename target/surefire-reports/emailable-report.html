@@ -9,10 +9,53 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">apiTestPlaywright.APITest</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1,013</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">875</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">apiTestPlaywright.APITest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">apiTestPlaywright.APITest</td><td><a href="#m0">testAPISogetiLeasingServices</a></td><td rowspan="1">1714728196838</td><td rowspan="1">29</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">apiTestPlaywright.APITest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">apiTestPlaywright.APITest</td><td><a href="#m0">testAPISogetiLeasingSolutions</a></td><td rowspan="1">1714730590803</td><td rowspan="1">8</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">apiTestPlaywright.APITest#testAPISogetiLeasingServices</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">apiTestPlaywright.APITest#testAPISogetiLeasingSolutions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;connect EHOSTUNREACH 172.24.218.143:8080
+  name=&apos;Error
+  stack=&apos;Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.fetchImpl(APIRequestContextImpl.java:138)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.lambda$fetch$1(APIRequestContextImpl.java:59)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.fetch(APIRequestContextImpl.java:59)
+	at com.microsoft.playwright.impl.APIRequestContextImpl.get(APIRequestContextImpl.java:179)
+	at com.microsoft.playwright.APIRequestContext.get(APIRequestContext.java:249)
+	at apiTestPlaywright.APITest.testAPISogetiLeasingSolutions(APITest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;connect EHOSTUNREACH 172.24.218.143:8080
+  name=&apos;Error
+  stack=&apos;Error: connect EHOSTUNREACH 172.24.218.143:8080
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+}
+Call log:
+- → GET http://172.24.218.143:8080/
+-   user-agent: Playwright/1.42.1 (x64; debian 12) java/17
+-   accept: */*
+-   accept-encoding: gzip,deflate,br
+-   Content-Type: application/json
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 47 more
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

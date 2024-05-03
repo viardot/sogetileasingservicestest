@@ -5,9 +5,9 @@
     <classes>
       <class name="apiTestPlaywright.APITest">
         <methods>
+          <include name="testAPISogetiLeasingSolutions"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="testAPISogetiLeasingServices"/>
         </methods>
       </class> <!-- apiTestPlaywright.APITest -->
     </classes>
