@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-03T09:11:19 CEST" name="Surefire suite" finished-at="2024-05-03T09:11:20 CEST" duration-ms="906">
+  <suite started-at="2024-05-03T11:23:15 CEST" name="apiTestPlaywright.APITest" finished-at="2024-05-03T11:23:16 CEST" duration-ms="1013">
     <groups>
     </groups>
-    <test started-at="2024-05-03T09:11:19 CEST" name="Surefire test" finished-at="2024-05-03T09:11:20 CEST" duration-ms="906">
+    <test started-at="2024-05-03T11:23:15 CEST" name="Command line test" finished-at="2024-05-03T11:23:16 CEST" duration-ms="1013">
       <class name="apiTestPlaywright.APITest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:apiTestPlaywright.APITest@3ffcd140]" started-at="2024-05-03T09:11:19 CEST" name="setup" finished-at="2024-05-03T09:11:20 CEST" duration-ms="860" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T11:23:15 CEST" name="setup" finished-at="2024-05-03T11:23:16 CEST" duration-ms="961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAPISogetiLeasingServices()[pri:0, instance:apiTestPlaywright.APITest@3ffcd140]" started-at="2024-05-03T09:11:20 CEST" name="testAPISogetiLeasingServices" finished-at="2024-05-03T09:11:20 CEST" duration-ms="27" status="PASS">
+        <test-method signature="testAPISogetiLeasingServices()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T11:23:16 CEST" name="testAPISogetiLeasingServices" finished-at="2024-05-03T11:23:16 CEST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAPISogetiLeasingServices -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:apiTestPlaywright.APITest@3ffcd140]" started-at="2024-05-03T09:11:20 CEST" name="teardown" finished-at="2024-05-03T09:11:20 CEST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:apiTestPlaywright.APITest@12c8a2c0]" started-at="2024-05-03T11:23:16 CEST" name="teardown" finished-at="2024-05-03T11:23:16 CEST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- apiTestPlaywright.APITest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Command line test -->
+  </suite> <!-- apiTestPlaywright.APITest -->
 </testng-results>

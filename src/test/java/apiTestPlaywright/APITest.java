@@ -3,6 +3,8 @@ package apiTestPlaywright;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.Playwright;
@@ -47,8 +49,9 @@ public class APITest {
 		Assert.assertEquals(responseStatus, 201);
 		
 		//GET
-		responseStatus = apiRequestContext.get("/product/1").status();		
-		Assert.assertEquals(responseStatus, 200);
+		String responseJSON = apiRequestContext.get("/product/1").text();		
+		JsonObject json = new Gson().fromJson(responseJSON, JsonObject.class);
+		Assert.assertNotNull(json.get("description"));
 		
 	}
 	

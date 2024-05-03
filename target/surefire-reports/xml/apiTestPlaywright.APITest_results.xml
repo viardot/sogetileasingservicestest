@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Surefire test"
+<testsuite name="Command line test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.027">
+           time="0.029">
     <properties></properties>
 
 
 
             <testcase
                 name="testAPISogetiLeasingServices"
-                time="0.027"
+                time="0.029"
                 classname="apiTestPlaywright.APITest">
             </testcase>
 </testsuite>
